@@ -112,4 +112,18 @@ class ParserTests: XCTestCase {
         parser.advance()
         XCTAssertEqual(parser.comp, "D")
     }
+    
+    func testJump() {
+        let testString = """
+        A=D-M
+        D;JGT
+        """
+        let parser = Parser(assembly: testString)
+        
+        parser.advance()
+        XCTAssertEqual(parser.jump, "null")
+        parser.advance()
+        XCTAssertEqual(parser.jump, "JGT")
+    }
+    
 }

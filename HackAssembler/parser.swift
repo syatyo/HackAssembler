@@ -103,4 +103,16 @@ final class Parser {
 
     }
     
+    var jump: String {
+        precondition(commandType == .c)
+        
+        if let semicolonIndex = currentCommand.firstIndex(of: ";") {
+            let jumpStartIndex = currentCommand.index(after: semicolonIndex)
+            return String(currentCommand[jumpStartIndex...])
+        } else {
+            return "null"
+        }
+
+    }
+
 }
