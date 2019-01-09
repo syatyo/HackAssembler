@@ -24,9 +24,10 @@ class ParserTests: XCTestCase {
         let path = testBundle.path(forResource: "MaxL", ofType: "txt")!
         let text = try! String(contentsOfFile: path, encoding: .utf8)
         let parser = Parser(assembly: text)
-
-        XCTAssertEqual(parser.commands.first!, "@0")
-        XCTAssertEqual(parser.commands[3], "D=D-M")
+        
+        XCTAssertEqual(parser.commands.first!, "") // initial command is empty.
+        XCTAssertEqual(parser.commands[1], "@0")
+        XCTAssertEqual(parser.commands[4], "D=D-M")
         XCTAssertEqual(parser.commands.last!, "0;JMP")
     }
     
@@ -49,16 +50,30 @@ class ParserTests: XCTestCase {
         """
         let parser = Parser(assembly: testString)
         
-        XCTAssertEqual(parser.cursor, 0)
+        XCTAssertEqual(parser.currentCommand, "")
         parser.advance()
-        XCTAssertEqual(parser.cursor, 1)
+        XCTAssertEqual(parser.currentCommand, "D=D-M")
         parser.advance()
-        XCTAssertEqual(parser.cursor, 2)
+        XCTAssertEqual(parser.currentCommand, "0;JMP")
         parser.advance()
-        XCTAssertEqual(parser.cursor, 2)
+        XCTAssertEqual(parser.currentCommand, "0;JMP")
     }
     
     func testCommandType() {
+        let testString = """
+            D=D-M
+            @0
+
+        (LOOP)
+        """
+        let parser = Parser(assembly: testString)
         
+        parser.advance()
+        XCTAssertEqual(parser.commandType, .c)
+        parser.advance()
+        XCTAssertEqual(parser.commandType, .a)
+        parser.advance()
+        XCTAssertEqual(parser.commandType, .l)
     }
+    
 }

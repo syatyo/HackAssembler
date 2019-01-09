@@ -27,7 +27,10 @@ enum CommnadType {
 final class Parser {
     
     let commands: [String]
-    private(set) var cursor: Int = 0
+    var currentCommand: String {
+        return commands[cursor]
+    }
+    private var cursor: Int = 0
     
     init(assembly: String) {
         let formatter = AssemblerFormatter(source: assembly)
@@ -37,12 +40,12 @@ final class Parser {
         if formatter.text.isEmpty {
             self.commands = []
         } else {
-            self.commands = formatter.text.components(separatedBy: "\n")
+            self.commands = [""] + formatter.text.components(separatedBy: "\n")
         }
     }
     
     var hasMoreCommands: Bool {
-        return cursor < commands.count
+        return cursor + 1 < commands.count
     }
     
     func advance() {
@@ -50,4 +53,10 @@ final class Parser {
             cursor += 1
         }
     }
+    
+    var commandType: CommnadType {
+        let currentCommand = commands[cursor]
+        return CommnadType(command: currentCommand)
+    }
+    
 }
