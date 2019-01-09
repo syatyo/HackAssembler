@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		18438D6621E6295000CFDC6A /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18438D6521E6295000CFDC6A /* main.swift */; };
+		18438D6D21E629B700CFDC6A /* parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18438D6C21E629B700CFDC6A /* parser.swift */; };
+		18438D7721E62A6E00CFDC6A /* HackAssemblerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18438D7621E62A6E00CFDC6A /* HackAssemblerTests.swift */; };
+		18438D7C21E62AB200CFDC6A /* ParsetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18438D6E21E629CC00CFDC6A /* ParsetTests.swift */; };
+		18438D7E21E62CBA00CFDC6A /* parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18438D6C21E629B700CFDC6A /* parser.swift */; };
+		18438D8221E632EA00CFDC6A /* MaxL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 18438D7F21E62DBA00CFDC6A /* MaxL.txt */; };
+		18438D8421E6347200CFDC6A /* assemblerFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18438D8321E6347200CFDC6A /* assemblerFormatter.swift */; };
+		18438D8621E634C200CFDC6A /* AssemblerFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18438D8521E634C200CFDC6A /* AssemblerFormatterTests.swift */; };
+		18438D8721E6351B00CFDC6A /* assemblerFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18438D8321E6347200CFDC6A /* assemblerFormatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,10 +33,25 @@
 /* Begin PBXFileReference section */
 		18438D6221E6295000CFDC6A /* HackAssembler */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HackAssembler; sourceTree = BUILT_PRODUCTS_DIR; };
 		18438D6521E6295000CFDC6A /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		18438D6C21E629B700CFDC6A /* parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = parser.swift; sourceTree = "<group>"; };
+		18438D6E21E629CC00CFDC6A /* ParsetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParsetTests.swift; sourceTree = "<group>"; };
+		18438D7421E62A6E00CFDC6A /* HackAssemblerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HackAssemblerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		18438D7621E62A6E00CFDC6A /* HackAssemblerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackAssemblerTests.swift; sourceTree = "<group>"; };
+		18438D7821E62A6E00CFDC6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18438D7F21E62DBA00CFDC6A /* MaxL.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = MaxL.txt; sourceTree = "<group>"; };
+		18438D8321E6347200CFDC6A /* assemblerFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = assemblerFormatter.swift; sourceTree = "<group>"; };
+		18438D8521E634C200CFDC6A /* AssemblerFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblerFormatterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		18438D5F21E6295000CFDC6A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18438D7121E62A6E00CFDC6A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				18438D6421E6295000CFDC6A /* HackAssembler */,
+				18438D7521E62A6E00CFDC6A /* HackAssemblerTests */,
 				18438D6321E6295000CFDC6A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				18438D6221E6295000CFDC6A /* HackAssembler */,
+				18438D7421E62A6E00CFDC6A /* HackAssemblerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,8 +83,22 @@
 			isa = PBXGroup;
 			children = (
 				18438D6521E6295000CFDC6A /* main.swift */,
+				18438D6C21E629B700CFDC6A /* parser.swift */,
+				18438D8321E6347200CFDC6A /* assemblerFormatter.swift */,
 			);
 			path = HackAssembler;
+			sourceTree = "<group>";
+		};
+		18438D7521E62A6E00CFDC6A /* HackAssemblerTests */ = {
+			isa = PBXGroup;
+			children = (
+				18438D7621E62A6E00CFDC6A /* HackAssemblerTests.swift */,
+				18438D6E21E629CC00CFDC6A /* ParsetTests.swift */,
+				18438D8521E634C200CFDC6A /* AssemblerFormatterTests.swift */,
+				18438D7F21E62DBA00CFDC6A /* MaxL.txt */,
+				18438D7821E62A6E00CFDC6A /* Info.plist */,
+			);
+			path = HackAssemblerTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -82,6 +121,23 @@
 			productReference = 18438D6221E6295000CFDC6A /* HackAssembler */;
 			productType = "com.apple.product-type.tool";
 		};
+		18438D7321E62A6E00CFDC6A /* HackAssemblerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18438D7921E62A6E00CFDC6A /* Build configuration list for PBXNativeTarget "HackAssemblerTests" */;
+			buildPhases = (
+				18438D7021E62A6E00CFDC6A /* Sources */,
+				18438D7121E62A6E00CFDC6A /* Frameworks */,
+				18438D7221E62A6E00CFDC6A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HackAssemblerTests;
+			productName = HackAssemblerTests;
+			productReference = 18438D7421E62A6E00CFDC6A /* HackAssemblerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -93,6 +149,9 @@
 				ORGANIZATIONNAME = "山田良治";
 				TargetAttributes = {
 					18438D6121E6295000CFDC6A = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					18438D7321E62A6E00CFDC6A = {
 						CreatedOnToolsVersion = 10.1;
 					};
 				};
@@ -110,16 +169,42 @@
 			projectRoot = "";
 			targets = (
 				18438D6121E6295000CFDC6A /* HackAssembler */,
+				18438D7321E62A6E00CFDC6A /* HackAssemblerTests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		18438D7221E62A6E00CFDC6A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18438D8221E632EA00CFDC6A /* MaxL.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		18438D5E21E6295000CFDC6A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18438D8421E6347200CFDC6A /* assemblerFormatter.swift in Sources */,
+				18438D6D21E629B700CFDC6A /* parser.swift in Sources */,
 				18438D6621E6295000CFDC6A /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18438D7021E62A6E00CFDC6A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18438D8621E634C200CFDC6A /* AssemblerFormatterTests.swift in Sources */,
+				18438D7E21E62CBA00CFDC6A /* parser.swift in Sources */,
+				18438D7C21E62AB200CFDC6A /* ParsetTests.swift in Sources */,
+				18438D7721E62A6E00CFDC6A /* HackAssemblerTests.swift in Sources */,
+				18438D8721E6351B00CFDC6A /* assemblerFormatter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +346,42 @@
 			};
 			name = Release;
 		};
+		18438D7A21E62A6E00CFDC6A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = Z5DLXLSS2U;
+				INFOPLIST_FILE = HackAssemblerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = syatyo.HackAssemblerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		18438D7B21E62A6E00CFDC6A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = Z5DLXLSS2U;
+				INFOPLIST_FILE = HackAssemblerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = syatyo.HackAssemblerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -278,6 +399,15 @@
 			buildConfigurations = (
 				18438D6A21E6295000CFDC6A /* Debug */,
 				18438D6B21E6295000CFDC6A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18438D7921E62A6E00CFDC6A /* Build configuration list for PBXNativeTarget "HackAssemblerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18438D7A21E62A6E00CFDC6A /* Debug */,
+				18438D7B21E62A6E00CFDC6A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
