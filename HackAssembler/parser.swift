@@ -66,13 +66,13 @@ final class Parser {
             return String(currentCommand[currentCommand.index(after: atIndex)...])
             
         case .l:
-            let parenthesisBeginIndex = currentCommand.firstIndex(of: "(")!
+            let parenthesisStartIndex = currentCommand.firstIndex(of: "(")!
             let parenthesisEndIndex = currentCommand.firstIndex(of: ")")!
             
-            let symbolBeginIndex = currentCommand.index(after: parenthesisBeginIndex)
+            let symbolStartIndex = currentCommand.index(after: parenthesisStartIndex)
             let symbolEndIndex = currentCommand.index(before: parenthesisEndIndex)
             
-            return String(currentCommand[symbolBeginIndex...symbolEndIndex])
+            return String(currentCommand[symbolStartIndex...symbolEndIndex])
         case .c:
             fatalError()
         }
