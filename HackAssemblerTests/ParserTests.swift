@@ -26,13 +26,21 @@ class ParserTests: XCTestCase {
         let parser = Parser(assembly: text)
 
         XCTAssertEqual(parser.commands.first!, "@0")
+        XCTAssertEqual(parser.commands[3], "D=D-M")
+        XCTAssertEqual(parser.commands.last!, "0;JMP")
     }
     
-//    func testHasMoreCommands() {
-//        let parser = Parser()
-//        
-//        XCTAssertEqual(parser.hasMoreCommands, false)
-//    }
+    func testHasMoreCommands() {
+        let testEmptyString = ""
+        let emptyParser = Parser(assembly: testEmptyString)
+        
+        XCTAssertEqual(emptyParser.hasMoreCommands, false)
+        
+        let testString = "a"
+        let parser = Parser(assembly: testString)
+        
+        XCTAssertEqual(parser.hasMoreCommands, true)
+    }
     
     
 }
