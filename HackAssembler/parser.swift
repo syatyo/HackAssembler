@@ -88,4 +88,19 @@ final class Parser {
         }
         
     }
+    
+    var comp: String {
+        precondition(commandType == .c)
+        
+        if let equalIndex = currentCommand.firstIndex(of: "=") {
+            let compStartIndex = currentCommand.index(after: equalIndex)
+            return String(currentCommand[compStartIndex...])
+        } else if let semicolonIndex = currentCommand.firstIndex(of: ";") {
+            return String(currentCommand[..<semicolonIndex])
+        } else {
+            fatalError("Undefined")
+        }
+
+    }
+    
 }
