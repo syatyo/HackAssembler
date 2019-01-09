@@ -42,5 +42,23 @@ class ParserTests: XCTestCase {
         XCTAssertEqual(parser.hasMoreCommands, true)
     }
     
+    func testAdvance() {
+        let testString = """
+        D=D-M
+        0;JMP
+        """
+        let parser = Parser(assembly: testString)
+        
+        XCTAssertEqual(parser.cursor, 0)
+        parser.advance()
+        XCTAssertEqual(parser.cursor, 1)
+        parser.advance()
+        XCTAssertEqual(parser.cursor, 2)
+        parser.advance()
+        XCTAssertEqual(parser.cursor, 2)
+    }
     
+    func testCommandType() {
+        
+    }
 }
