@@ -75,5 +75,18 @@ class ParserTests: XCTestCase {
         XCTAssertEqual(parser.commandType, .l)
     }
     
+    func testSymbol() {
+        let testString = """
+        @100
+        (LOOP)
+        """
+        let parser = Parser(assembly: testString)
+        
+        parser.advance()
+        XCTAssertEqual(parser.symbol, "100")
+        parser.advance()
+        XCTAssertEqual(parser.symbol, "LOOP")
+
+    }
     
 }

@@ -55,8 +55,26 @@ final class Parser {
     }
     
     var commandType: CommnadType {
-        let currentCommand = commands[cursor]
         return CommnadType(command: currentCommand)
+    }
+    
+    var symbol: String {
+        switch commandType {
+        case .a:
+            let atIndex = currentCommand.firstIndex(of: "@")!
+            return String(currentCommand[currentCommand.index(after: atIndex)...])
+            
+        case .l:
+            let parenthesisBeginIndex = currentCommand.firstIndex(of: "(")!
+            let parenthesisEndIndex = currentCommand.firstIndex(of: ")")!
+            
+            let symbolBeginIndex = currentCommand.index(after: parenthesisBeginIndex)
+            let symbolEndIndex = currentCommand.index(before: parenthesisEndIndex)
+            
+            return String(currentCommand[symbolBeginIndex...symbolEndIndex])
+        case .c:
+            fatalError()
+        }
     }
     
 }
