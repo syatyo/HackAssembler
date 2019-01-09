@@ -54,8 +54,6 @@ class ParserTests: XCTestCase {
         XCTAssertEqual(parser.currentCommand, "D=D-M")
         parser.advance()
         XCTAssertEqual(parser.currentCommand, "0;JMP")
-        parser.advance()
-        XCTAssertEqual(parser.currentCommand, "0;JMP")
     }
     
     func testCommandType() {

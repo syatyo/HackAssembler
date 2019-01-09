@@ -49,9 +49,8 @@ final class Parser {
     }
     
     func advance() {
-        if hasMoreCommands {
-            cursor += 1
-        }
+        precondition(hasMoreCommands == true)
+        cursor += 1
     }
     
     var commandType: CommnadType {
@@ -59,6 +58,8 @@ final class Parser {
     }
     
     var symbol: String {
+        precondition(commandType != .c)
+        
         switch commandType {
         case .a:
             let atIndex = currentCommand.firstIndex(of: "@")!
@@ -76,5 +77,5 @@ final class Parser {
             fatalError()
         }
     }
-    
+        
 }
