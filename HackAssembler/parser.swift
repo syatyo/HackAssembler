@@ -77,5 +77,15 @@ final class Parser {
             fatalError()
         }
     }
+    
+    var dest: String {
+        precondition(commandType == .c)
         
+        if let equalIndex = currentCommand.firstIndex(of: "=") {
+            return String(currentCommand[..<equalIndex])
+        } else {
+            return "null"
+        }
+        
+    }
 }

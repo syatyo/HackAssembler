@@ -87,4 +87,17 @@ class ParserTests: XCTestCase {
 
     }
     
+    func testDest() {
+        let testString = """
+        A=D-M
+        D;JGT
+        """
+        let parser = Parser(assembly: testString)
+        
+        parser.advance()
+        XCTAssertEqual(parser.dest, "A")
+        parser.advance()
+        XCTAssertEqual(parser.dest, "null")
+    }
+    
 }
