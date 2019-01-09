@@ -7,7 +7,6 @@
 //
 
 import XCTest
-@testable import HackAssembler
 
 class ParserTests: XCTestCase {
 
@@ -75,5 +74,6 @@ class ParserTests: XCTestCase {
         parser.advance()
         XCTAssertEqual(parser.commandType, .l)
     }
+    
     
 }
