@@ -10,7 +10,7 @@
 		18438D6621E6295000CFDC6A /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18438D6521E6295000CFDC6A /* main.swift */; };
 		18438D6D21E629B700CFDC6A /* parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18438D6C21E629B700CFDC6A /* parser.swift */; };
 		18438D7721E62A6E00CFDC6A /* HackAssemblerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18438D7621E62A6E00CFDC6A /* HackAssemblerTests.swift */; };
-		18438D7C21E62AB200CFDC6A /* ParsetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18438D6E21E629CC00CFDC6A /* ParsetTests.swift */; };
+		18438D7C21E62AB200CFDC6A /* ParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18438D6E21E629CC00CFDC6A /* ParserTests.swift */; };
 		18438D7E21E62CBA00CFDC6A /* parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18438D6C21E629B700CFDC6A /* parser.swift */; };
 		18438D8221E632EA00CFDC6A /* MaxL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 18438D7F21E62DBA00CFDC6A /* MaxL.txt */; };
 		18438D8421E6347200CFDC6A /* assemblerFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18438D8321E6347200CFDC6A /* assemblerFormatter.swift */; };
@@ -34,7 +34,7 @@
 		18438D6221E6295000CFDC6A /* HackAssembler */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HackAssembler; sourceTree = BUILT_PRODUCTS_DIR; };
 		18438D6521E6295000CFDC6A /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		18438D6C21E629B700CFDC6A /* parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = parser.swift; sourceTree = "<group>"; };
-		18438D6E21E629CC00CFDC6A /* ParsetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParsetTests.swift; sourceTree = "<group>"; };
+		18438D6E21E629CC00CFDC6A /* ParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParserTests.swift; sourceTree = "<group>"; };
 		18438D7421E62A6E00CFDC6A /* HackAssemblerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HackAssemblerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18438D7621E62A6E00CFDC6A /* HackAssemblerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackAssemblerTests.swift; sourceTree = "<group>"; };
 		18438D7821E62A6E00CFDC6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -93,7 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				18438D7621E62A6E00CFDC6A /* HackAssemblerTests.swift */,
-				18438D6E21E629CC00CFDC6A /* ParsetTests.swift */,
+				18438D6E21E629CC00CFDC6A /* ParserTests.swift */,
 				18438D8521E634C200CFDC6A /* AssemblerFormatterTests.swift */,
 				18438D7F21E62DBA00CFDC6A /* MaxL.txt */,
 				18438D7821E62A6E00CFDC6A /* Info.plist */,
@@ -202,7 +202,7 @@
 			files = (
 				18438D8621E634C200CFDC6A /* AssemblerFormatterTests.swift in Sources */,
 				18438D7E21E62CBA00CFDC6A /* parser.swift in Sources */,
-				18438D7C21E62AB200CFDC6A /* ParsetTests.swift in Sources */,
+				18438D7C21E62AB200CFDC6A /* ParserTests.swift in Sources */,
 				18438D7721E62A6E00CFDC6A /* HackAssemblerTests.swift in Sources */,
 				18438D8721E6351B00CFDC6A /* assemblerFormatter.swift in Sources */,
 			);
