@@ -17,6 +17,9 @@
 		18438D8621E634C200CFDC6A /* AssemblerFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18438D8521E634C200CFDC6A /* AssemblerFormatterTests.swift */; };
 		18438D8721E6351B00CFDC6A /* AssemblerFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18438D8321E6347200CFDC6A /* AssemblerFormatter.swift */; };
 		18438D8921E6479D00CFDC6A /* CommandTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18438D8821E6479D00CFDC6A /* CommandTypeTests.swift */; };
+		18438D8D21E6CD3700CFDC6A /* CodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18438D8C21E6CD3700CFDC6A /* CodeTests.swift */; };
+		18438D8F21E6CF9400CFDC6A /* Code.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18438D8E21E6CF9400CFDC6A /* Code.swift */; };
+		18438D9021E6CF9700CFDC6A /* Code.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18438D8E21E6CF9400CFDC6A /* Code.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,6 +46,8 @@
 		18438D8321E6347200CFDC6A /* AssemblerFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblerFormatter.swift; sourceTree = "<group>"; };
 		18438D8521E634C200CFDC6A /* AssemblerFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblerFormatterTests.swift; sourceTree = "<group>"; };
 		18438D8821E6479D00CFDC6A /* CommandTypeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandTypeTests.swift; sourceTree = "<group>"; };
+		18438D8C21E6CD3700CFDC6A /* CodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeTests.swift; sourceTree = "<group>"; };
+		18438D8E21E6CF9400CFDC6A /* Code.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Code.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +91,7 @@
 			children = (
 				18438D6521E6295000CFDC6A /* main.swift */,
 				18438D6C21E629B700CFDC6A /* Parser.swift */,
+				18438D8E21E6CF9400CFDC6A /* Code.swift */,
 				18438D8321E6347200CFDC6A /* AssemblerFormatter.swift */,
 			);
 			path = HackAssembler;
@@ -96,6 +102,7 @@
 			children = (
 				18438D7621E62A6E00CFDC6A /* HackAssemblerTests.swift */,
 				18438D6E21E629CC00CFDC6A /* ParserTests.swift */,
+				18438D8C21E6CD3700CFDC6A /* CodeTests.swift */,
 				18438D8821E6479D00CFDC6A /* CommandTypeTests.swift */,
 				18438D8521E634C200CFDC6A /* AssemblerFormatterTests.swift */,
 				18438D7F21E62DBA00CFDC6A /* MaxL.txt */,
@@ -193,6 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18438D8F21E6CF9400CFDC6A /* Code.swift in Sources */,
 				18438D8421E6347200CFDC6A /* AssemblerFormatter.swift in Sources */,
 				18438D6D21E629B700CFDC6A /* Parser.swift in Sources */,
 				18438D6621E6295000CFDC6A /* main.swift in Sources */,
@@ -203,8 +211,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18438D9021E6CF9700CFDC6A /* Code.swift in Sources */,
 				18438D8621E634C200CFDC6A /* AssemblerFormatterTests.swift in Sources */,
 				18438D7E21E62CBA00CFDC6A /* Parser.swift in Sources */,
+				18438D8D21E6CD3700CFDC6A /* CodeTests.swift in Sources */,
 				18438D7C21E62AB200CFDC6A /* ParserTests.swift in Sources */,
 				18438D8921E6479D00CFDC6A /* CommandTypeTests.swift in Sources */,
 				18438D7721E62A6E00CFDC6A /* HackAssemblerTests.swift in Sources */,
