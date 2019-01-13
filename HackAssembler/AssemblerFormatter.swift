@@ -21,24 +21,27 @@ final class AssemblerFormatter {
     func removeComments() {
         
         lines = lines.compactMap { line in
-            if line.starts(with: "//") {
-                return nil
-            } else {
+            guard line.contains("//") else {
                 return line
             }
+            
+            let firstSlashIndex = line.firstIndex(of: "/")!
+            return String(line[line.startIndex..<firstSlashIndex])
         }
         
     }
     
     func removeWhiteSpaces() {
+        lines = lines.compactMap { $0.replacingOccurrences(of: " ", with: "") }
+    }
+    
+    func removeEmptyLine() {
         lines = lines.compactMap { line in
-            let trimmedLine = line.replacingOccurrences(of: " ", with: "")
-            if trimmedLine.isEmpty {
+            if line.isEmpty {
                 return nil
             } else {
-                return trimmedLine
+                return line
             }
         }
     }
-    
 }

@@ -36,6 +36,7 @@ final class Parser {
         let formatter = AssemblerFormatter(source: assembly)
         formatter.removeComments()
         formatter.removeWhiteSpaces()
+        formatter.removeEmptyLine()
         
         if formatter.text.isEmpty {
             self.commands = []

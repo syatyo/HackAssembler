@@ -21,17 +21,20 @@ class AssemblerFormatterTests: XCTestCase {
     func testRemoveComments() {
         let testString = """
         //should be removed
-        aaa
+        D=M// D = first number
         // should be removed
-        bbb
+        D=D-M// D = first number - second number
         //   should be removed
         """
         let formatter = AssemblerFormatter(source: testString)
         formatter.removeComments()
         
         let expectedString = """
-        aaa
-        bbb
+
+        D=M
+        
+        D=D-M
+
         """
 
         XCTAssertEqual(formatter.text, expectedString)
@@ -53,6 +56,27 @@ class AssemblerFormatterTests: XCTestCase {
         XCTAssertEqual(formatter.text, expectedString)
     }
     
+    func testRemoveEmptyLine() {
+        let testString = """
+
+        D=M
+        
+        D=D-M
+
+        """
+        
+        let formatter = AssemblerFormatter(source: testString)
+        
+        let expectedString = """
+        D=M
+        D=D-M
+        """
+
+        formatter.removeEmptyLine()
+        
+        XCTAssertEqual(formatter.text, expectedString)
+    }
+    
     // Join test
     func testFormatAssembler() {
         let testString = """
@@ -66,6 +90,7 @@ class AssemblerFormatterTests: XCTestCase {
         let formatter = AssemblerFormatter(source: testString)
         formatter.removeComments()
         formatter.removeWhiteSpaces()
+        formatter.removeEmptyLine()
         
         let expectedString = """
         aaa
