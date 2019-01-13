@@ -67,7 +67,7 @@ class AssemblerTests: XCTestCase {
         1110101010000111
         """
         
-        let assembler = HackAssembler(assembly: testAssembly)
+        let assembler = Assembler(assembly: testAssembly)
         let assembled = assembler.assembled()
         XCTAssertEqual(assembled, expectation)
     }

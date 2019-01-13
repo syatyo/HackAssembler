@@ -24,8 +24,8 @@
 		18438D9721EB303100CFDC6A /* SymbolTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18438D9621EB303100CFDC6A /* SymbolTable.swift */; };
 		18438D9821EB30A200CFDC6A /* SymbolTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18438D9621EB303100CFDC6A /* SymbolTable.swift */; };
 		18438D9C21EB33E300CFDC6A /* AssemblerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18438D9B21EB33E300CFDC6A /* AssemblerTests.swift */; };
-		18438D9E21EB354D00CFDC6A /* HackAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18438D9D21EB354D00CFDC6A /* HackAssembler.swift */; };
-		18438D9F21EB358200CFDC6A /* HackAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18438D9D21EB354D00CFDC6A /* HackAssembler.swift */; };
+		18438D9E21EB354D00CFDC6A /* Assembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18438D9D21EB354D00CFDC6A /* Assembler.swift */; };
+		18438D9F21EB358200CFDC6A /* Assembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18438D9D21EB354D00CFDC6A /* Assembler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -57,7 +57,7 @@
 		18438D9421EB2FA300CFDC6A /* SymbolTableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolTableTests.swift; sourceTree = "<group>"; };
 		18438D9621EB303100CFDC6A /* SymbolTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolTable.swift; sourceTree = "<group>"; };
 		18438D9B21EB33E300CFDC6A /* AssemblerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblerTests.swift; sourceTree = "<group>"; };
-		18438D9D21EB354D00CFDC6A /* HackAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HackAssembler.swift; path = ../../../../HackAssembler.swift; sourceTree = "<group>"; };
+		18438D9D21EB354D00CFDC6A /* Assembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Assembler.swift; path = ../../../../Assembler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +104,7 @@
 				18438D8E21E6CF9400CFDC6A /* Code.swift */,
 				18438D9621EB303100CFDC6A /* SymbolTable.swift */,
 				18438D8321E6347200CFDC6A /* AssemblerFormatter.swift */,
-				18438D9D21EB354D00CFDC6A /* HackAssembler.swift */,
+				18438D9D21EB354D00CFDC6A /* Assembler.swift */,
 			);
 			path = HackAssembler;
 			sourceTree = "<group>";
@@ -219,7 +219,7 @@
 				18438D9721EB303100CFDC6A /* SymbolTable.swift in Sources */,
 				18438D6D21E629B700CFDC6A /* Parser.swift in Sources */,
 				18438D6621E6295000CFDC6A /* main.swift in Sources */,
-				18438D9E21EB354D00CFDC6A /* HackAssembler.swift in Sources */,
+				18438D9E21EB354D00CFDC6A /* Assembler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,7 +238,7 @@
 				18438D7721E62A6E00CFDC6A /* HackAssemblerTests.swift in Sources */,
 				18438D9C21EB33E300CFDC6A /* AssemblerTests.swift in Sources */,
 				18438D8721E6351B00CFDC6A /* AssemblerFormatter.swift in Sources */,
-				18438D9F21EB358200CFDC6A /* HackAssembler.swift in Sources */,
+				18438D9F21EB358200CFDC6A /* Assembler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
