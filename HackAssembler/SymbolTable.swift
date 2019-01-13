@@ -11,6 +11,12 @@ import Foundation
 final class SymbolTable {
     private var table: [String: Int] = [:]
     
+    init() {
+        (0...15).forEach { table["R\($0!)"] = $0 }
+        table["SCREEN"] = 16384
+        table["KBD"] = 24576
+    }
+    
     func addEntry(symbol: String, address: Int) {
         table[symbol] = address
     }
@@ -20,10 +26,28 @@ final class SymbolTable {
     }
     
     func getAddress(symbol: String) -> Int {
-        let address = table[symbol]
-        assert(address != nil)
-        
-        return address!
+        switch symbol {
+        case "SP":
+            return table["R0"]!
+            
+        case "LCL":
+            return table["R1"]!
+            
+        case "ARG":
+            return table["R2"]!
+            
+        case "THIS":
+            return table["R3"]!
+            
+        case "THAT":
+            return table["R4"]!
+            
+        default:
+            let address = table[symbol]
+            assert(address != nil)
+            
+            return address!
+        }
     }
     
 }
