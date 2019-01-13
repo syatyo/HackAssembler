@@ -48,6 +48,10 @@ final class Parser {
         return cursor + 1 < commands.count
     }
     
+    func reset() {
+        cursor = 0
+    }
+    
     func advance() {
         precondition(hasMoreCommands == true)
         cursor += 1
