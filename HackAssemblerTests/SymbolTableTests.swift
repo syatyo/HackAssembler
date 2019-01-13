@@ -47,7 +47,7 @@ class SymbolTableTests: XCTestCase {
         for i in 0...15 {
             let registerName = "R\(i)"
             let address = symbolTable.getAddress(symbol: registerName)
-            XCTAssertEqual(address, i)
+            XCTAssertEqual(address, Int16(i))
         }
         
         let screen = symbolTable.getAddress(symbol: "SCREEN")

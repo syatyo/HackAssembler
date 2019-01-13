@@ -9,7 +9,7 @@
 import Foundation
 
 final class SymbolTable {
-    private var table: [String: Int] = [:]
+    private(set) var table: [String: Int16] = [:]
     
     init() {
         (0...15).forEach { table["R\($0!)"] = $0 }
@@ -17,7 +17,7 @@ final class SymbolTable {
         table["KBD"] = 24576
     }
     
-    func addEntry(symbol: String, address: Int) {
+    func addEntry(symbol: String, address: Int16) {
         table[symbol] = address
     }
     
@@ -25,7 +25,7 @@ final class SymbolTable {
         return table[symbol] != nil
     }
     
-    func getAddress(symbol: String) -> Int {
+    func getAddress(symbol: String) -> Int16 {
         switch symbol {
         case "SP":
             return table["R0"]!
