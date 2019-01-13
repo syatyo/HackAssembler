@@ -109,9 +109,9 @@
 				18438D7621E62A6E00CFDC6A /* HackAssemblerTests.swift */,
 				18438D6E21E629CC00CFDC6A /* ParserTests.swift */,
 				18438D8C21E6CD3700CFDC6A /* CodeTests.swift */,
-				18438D8821E6479D00CFDC6A /* CommandTypeTests.swift */,
-				18438D8521E634C200CFDC6A /* AssemblerFormatterTests.swift */,
 				18438D9421EB2FA300CFDC6A /* SymbolTableTests.swift */,
+				18438D8521E634C200CFDC6A /* AssemblerFormatterTests.swift */,
+				18438D8821E6479D00CFDC6A /* CommandTypeTests.swift */,
 				18438D7F21E62DBA00CFDC6A /* MaxL.txt */,
 				18438D7821E62A6E00CFDC6A /* Info.plist */,
 			);
