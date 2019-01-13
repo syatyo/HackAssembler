@@ -64,4 +64,14 @@ class CodeTests: XCTestCase {
         }
     }
     
+    func testJump() {
+        let testMnemonics = ["null", "JGT", "JEQ", "JGE", "JLT", "JNE", "JLE", "JMP"]
+        let expectations = ["000", "001", "010", "011", "100", "101", "110", "111"]
+        
+        for (index, testMnemonic) in testMnemonics.enumerated() {
+            let binary = Code.jump(from: testMnemonic)
+            XCTAssertEqual(binary, expectations[index])
+        }
+    }
+    
 }

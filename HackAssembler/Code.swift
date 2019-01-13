@@ -56,6 +56,22 @@ struct Code {
         default: fatalError() // Implementation failure.
         }
     }
+    
+    static func jump(from mnemonic: String) -> String {
+        guard mnemonic != "JNE" else {
+            return "101"
+        }
+        
+        guard mnemonic != "JMP" else {
+            return "111"
+        }
+        
+        let j1 = mnemonic.contains("L").binary
+        let j2 = mnemonic.contains("E").binary
+        let j3 = mnemonic.contains("G").binary
+        return "\(j1)\(j2)\(j3)"
+    }
+    
 }
 
 extension Bool {
