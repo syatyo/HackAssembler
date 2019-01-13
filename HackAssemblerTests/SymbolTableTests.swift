@@ -9,10 +9,11 @@
 import XCTest
 
 class SymbolTableTests: XCTestCase {
-    let symbolTable = SymbolTable()
+    let variableSymbolTable = VariableSymbolTable()
+    let labelSymbolTable = LabelSymbolTable()
     
     override func setUp() {
-        symbolTable.addEntry(symbol: "testSymbol", address: 80)
+        variableSymbolTable.addEntry(symbol: "testSymbol", address: 80)
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
 
@@ -21,39 +22,39 @@ class SymbolTableTests: XCTestCase {
     }
     
     func testContains() {
-        XCTAssertTrue(symbolTable.contains(symbol: "testSymbol"))
+        XCTAssertTrue(variableSymbolTable.contains(symbol: "testSymbol"))
     }
     
     func testGetAddress() {
-        XCTAssertEqual(symbolTable.getAddress(symbol: "testSymbol"), 80)
+        XCTAssertEqual(variableSymbolTable.getAddress(symbol: "testSymbol"), 80)
     }
     
     func testGetDefinedSymbolAddress() {
-        let sp = symbolTable.getAddress(symbol: "SP")
+        let sp = labelSymbolTable.getAddress(symbol: "SP")
         XCTAssertEqual(sp, 0)
         
-        let lcl = symbolTable.getAddress(symbol: "LCL")
+        let lcl = labelSymbolTable.getAddress(symbol: "LCL")
         XCTAssertEqual(lcl, 1)
         
-        let arg = symbolTable.getAddress(symbol: "ARG")
+        let arg = labelSymbolTable.getAddress(symbol: "ARG")
         XCTAssertEqual(arg, 2)
         
-        let this = symbolTable.getAddress(symbol: "THIS")
+        let this = labelSymbolTable.getAddress(symbol: "THIS")
         XCTAssertEqual(this, 3)
         
-        let that = symbolTable.getAddress(symbol: "THAT")
+        let that = labelSymbolTable.getAddress(symbol: "THAT")
         XCTAssertEqual(that, 4)
         
         for i in 0...15 {
             let registerName = "R\(i)"
-            let address = symbolTable.getAddress(symbol: registerName)
+            let address = labelSymbolTable.getAddress(symbol: registerName)
             XCTAssertEqual(address, i)
         }
         
-        let screen = symbolTable.getAddress(symbol: "SCREEN")
+        let screen = labelSymbolTable.getAddress(symbol: "SCREEN")
         XCTAssertEqual(screen, 16384)
         
-        let kbd = symbolTable.getAddress(symbol: "KBD")
+        let kbd = labelSymbolTable.getAddress(symbol: "KBD")
         XCTAssertEqual(kbd, 24576)
     }
     
