@@ -50,6 +50,7 @@ final class Assembler {
                         hackCommnads.append(value)
                     } else {
                         symbolTable.addEntry(symbol: parser.symbol, address: initialRAMAddress)
+                        hackCommnads.append(initialRAMAddress.binaryString)
                         initialRAMAddress += 1
                     }
                 }

@@ -57,7 +57,7 @@
 		18438D9421EB2FA300CFDC6A /* SymbolTableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolTableTests.swift; sourceTree = "<group>"; };
 		18438D9621EB303100CFDC6A /* SymbolTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolTable.swift; sourceTree = "<group>"; };
 		18438D9B21EB33E300CFDC6A /* AssemblerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblerTests.swift; sourceTree = "<group>"; };
-		18438D9D21EB354D00CFDC6A /* Assembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Assembler.swift; path = ../../../../Assembler.swift; sourceTree = "<group>"; };
+		18438D9D21EB354D00CFDC6A /* Assembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
