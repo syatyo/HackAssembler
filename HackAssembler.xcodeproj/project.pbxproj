@@ -26,6 +26,8 @@
 		18438D9C21EB33E300CFDC6A /* AssemblerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18438D9B21EB33E300CFDC6A /* AssemblerTests.swift */; };
 		18438D9E21EB354D00CFDC6A /* Assembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18438D9D21EB354D00CFDC6A /* Assembler.swift */; };
 		18438D9F21EB358200CFDC6A /* Assembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18438D9D21EB354D00CFDC6A /* Assembler.swift */; };
+		18438DA121EC258800CFDC6A /* PongAsm.txt in Resources */ = {isa = PBXBuildFile; fileRef = 18438DA021EC258800CFDC6A /* PongAsm.txt */; };
+		18438DA321EC264B00CFDC6A /* PongHack.txt in Resources */ = {isa = PBXBuildFile; fileRef = 18438DA221EC264B00CFDC6A /* PongHack.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -58,6 +60,8 @@
 		18438D9621EB303100CFDC6A /* SymbolTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolTable.swift; sourceTree = "<group>"; };
 		18438D9B21EB33E300CFDC6A /* AssemblerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblerTests.swift; sourceTree = "<group>"; };
 		18438D9D21EB354D00CFDC6A /* Assembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembler.swift; sourceTree = "<group>"; };
+		18438DA021EC258800CFDC6A /* PongAsm.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = PongAsm.txt; sourceTree = "<group>"; };
+		18438DA221EC264B00CFDC6A /* PongHack.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PongHack.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +123,8 @@
 				18438D8521E634C200CFDC6A /* AssemblerFormatterTests.swift */,
 				18438D9B21EB33E300CFDC6A /* AssemblerTests.swift */,
 				18438D8821E6479D00CFDC6A /* CommandTypeTests.swift */,
+				18438DA021EC258800CFDC6A /* PongAsm.txt */,
+				18438DA221EC264B00CFDC6A /* PongHack.txt */,
 				18438D7F21E62DBA00CFDC6A /* MaxL.txt */,
 				18438D7821E62A6E00CFDC6A /* Info.plist */,
 			);
@@ -203,6 +209,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18438DA321EC264B00CFDC6A /* PongHack.txt in Resources */,
+				18438DA121EC258800CFDC6A /* PongAsm.txt in Resources */,
 				18438D8221E632EA00CFDC6A /* MaxL.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

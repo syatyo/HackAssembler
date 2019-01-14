@@ -144,5 +144,23 @@ class AssemblerTests: XCTestCase {
         XCTAssertEqual(assembled, expectation)
     }
 
+    func testPong() {
+        let testBundle = Bundle(for: type(of: self))
+        let asmPath = testBundle.path(forResource: "PongAsm", ofType: "txt")!
+        let testAssembly = try! String(contentsOfFile: asmPath, encoding: .utf8)
+        
+        let hackPath = testBundle.path(forResource: "PongHack", ofType: "txt")!
+        let hack = try! String(contentsOfFile: hackPath, encoding: .utf8)
+        let hackCommnads = hack.components(separatedBy: .newlines)
+        
+        let assembler = Assembler(assembly: testAssembly)
+        let binaryText = assembler.assembled()
+        let binaryCommands = binaryText.components(separatedBy: .newlines)
+        
+        for (index, binaryCommand) in binaryCommands.enumerated() {
+            // It is too hard to debug, if I use String or [String] for assert. 
+            XCTAssertEqual(binaryCommand, hackCommnads[index], "Problem is occured at \(index)")
+        }
+    }
     
 }

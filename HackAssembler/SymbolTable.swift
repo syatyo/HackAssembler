@@ -22,31 +22,44 @@ final class SymbolTable {
     }
     
     func contains(symbol: String) -> Bool {
+        
+        guard findAlias(symbol: symbol) == nil else {
+            return true
+        }
+        
         return table[symbol] != nil
     }
     
     func getAddress(symbol: String) -> Int16 {
-        switch symbol {
-        case "SP":
-            return table["R0"]!
-            
-        case "LCL":
-            return table["R1"]!
-            
-        case "ARG":
-            return table["R2"]!
-            
-        case "THIS":
-            return table["R3"]!
-            
-        case "THAT":
-            return table["R4"]!
-            
-        default:
+        if let alilas = findAlias(symbol: symbol) {
+            return alilas
+        } else {
             let address = table[symbol]
             assert(address != nil)
             
             return address!
+        }
+    }
+    
+    private func findAlias(symbol: String) -> Int16? {
+        switch symbol {
+        case "SP":
+            return table["R0"]
+            
+        case "LCL":
+            return table["R1"]
+            
+        case "ARG":
+            return table["R2"]
+            
+        case "THIS":
+            return table["R3"]
+            
+        case "THAT":
+            return table["R4"]
+            
+        default:
+            return nil
         }
     }
     
